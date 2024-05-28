@@ -902,11 +902,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8007466312498025151}
   - component: {fileID: 6413013834153556191}
-  - component: {fileID: 1800895511225387646}
-  - component: {fileID: 5061381150725782848}
-  - component: {fileID: 3432343313199123179}
-  - component: {fileID: 8207790437754989227}
-  - component: {fileID: 7481716212601355389}
+  - component: {fileID: 8891401506185390696}
+  - component: {fileID: 6921562381270410223}
+  - component: {fileID: 989450276733914877}
+  - component: {fileID: 6421410746007495898}
   m_Layer: 0
   m_Name: PFB_Astronaut
   m_TagString: Untagged
@@ -951,19 +950,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!210 &1800895511225387646
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835229685202505509}
-  m_Enabled: 1
-  m_SortingLayerID: 2097750727
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortAtRoot: 0
---- !u!50 &5061381150725782848
+--- !u!50 &8891401506185390696
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -978,7 +965,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -990,7 +977,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &3432343313199123179
+--- !u!61 &6921562381270410223
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1022,7 +1009,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: 1.04}
+  m_Offset: {x: -0.050994158, y: 2.7331202}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1033,9 +1020,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.54, y: 2.14}
+  m_Size: {x: 1.5099416, y: 5.505959}
   m_EdgeRadius: 0
---- !u!114 &8207790437754989227
+--- !u!114 &989450276733914877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1050,7 +1037,10 @@ MonoBehaviour:
   velocity: 10
   runningSpeed: 20
   jumpForce: 20
---- !u!114 &7481716212601355389
+  boolRun: run
+  boolRunning: running
+  animator: {fileID: 6413013834153556191}
+--- !u!114 &6421410746007495898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

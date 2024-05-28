@@ -356,10 +356,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2944973745361044811}
   - component: {fileID: 3122169294817524646}
-  - component: {fileID: 3186077956606392903}
-  - component: {fileID: 2825755675086271311}
-  - component: {fileID: 7874986405978526681}
-  - component: {fileID: 8988353775853180509}
+  - component: {fileID: 8419466217084369901}
+  - component: {fileID: 972684643986665101}
+  - component: {fileID: 2109502170085065610}
   m_Layer: 0
   m_Name: PFB_Enemy_2
   m_TagString: Untagged
@@ -413,19 +412,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!210 &3186077956606392903
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3176744783887258002}
-  m_Enabled: 1
-  m_SortingLayerID: 2097750727
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortAtRoot: 0
---- !u!61 &2825755675086271311
+--- !u!61 &8419466217084369901
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -457,7 +444,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 3.31}
+  m_Offset: {x: -0.077851295, y: 3.3303022}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -468,9 +455,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.57, y: 5.38}
+  m_Size: {x: 4.2351522, y: 6.726391}
   m_EdgeRadius: 0
---- !u!50 &7874986405978526681
+--- !u!50 &972684643986665101
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -496,8 +483,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 1
---- !u!114 &8988353775853180509
+  m_Constraints: 0
+--- !u!114 &2109502170085065610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
