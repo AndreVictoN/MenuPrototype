@@ -359,6 +359,8 @@ GameObject:
   - component: {fileID: 8419466217084369901}
   - component: {fileID: 972684643986665101}
   - component: {fileID: 2109502170085065610}
+  - component: {fileID: 7241131783746684893}
+  - component: {fileID: 4620728660955820445}
   m_Layer: 0
   m_Name: PFB_Enemy_2
   m_TagString: Untagged
@@ -497,6 +499,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+  animator: {fileID: 3122169294817524646}
+  triggerAttack: attack
+  triggerKill: kill
+  healthBase: {fileID: 7241131783746684893}
+  timeToDestroy: 1
+--- !u!114 &7241131783746684893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3176744783887258002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c421580d1a075584cbfd66a793d6e7d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLife: 10
+  destroyOnKill: 0
+  _flashColor: {fileID: 4620728660955820445}
+--- !u!114 &4620728660955820445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3176744783887258002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a68529a20d6b4a84baac40af73c8cd03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 3562818169227747833}
+  - {fileID: 7803505671189439292}
+  - {fileID: 444083526418024891}
+  - {fileID: 7779900026986254017}
+  - {fileID: 8779633609815029051}
+  - {fileID: 1181539698875460310}
+  - {fileID: 6176580827313767728}
+  color: {r: 0.83137256, g: 1, b: 0.5882353, a: 1}
+  duration: 0.2
 --- !u!1 &3257322378915922041
 GameObject:
   m_ObjectHideFlags: 0

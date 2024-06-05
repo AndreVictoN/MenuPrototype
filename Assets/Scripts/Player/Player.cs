@@ -23,10 +23,26 @@ public class Player : MonoBehaviour
 
     private bool _isOnFloor;
 
+    [Header("Death Animation")]
+    public HealthBase healthBase;
+    public string triggerKill = "kill";
+
+    private void OnPlayerKill()
+    {
+        healthBase.OnKill -= OnPlayerKill;
+
+        animator.SetTrigger(triggerKill);
+    }
+
     private void Awake()
     {
         _isOnFloor = false;
         _currentVelocity = velocity;
+
+        if(healthBase != null)
+        {
+            healthBase.OnKill += OnPlayerKill;
+        }
     }
 
     private void Start()
@@ -42,7 +58,7 @@ public class Player : MonoBehaviour
 
     public void Movement()
     {
-        if(Input.GetKey(KeyCode.LeftShift))
+        if((Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.RightArrow)))
         {
             _currentVelocity = runningSpeed;
 
@@ -89,7 +105,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.CompareTag("floor"))
+        if(col.gameObject.CompareTag("floor") || col.gameObject.CompareTag("enemy"))
         {
             _isOnFloor = true;
         }
@@ -97,7 +113,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if(col.gameObject.CompareTag("floor"))
+        if(col.gameObject.CompareTag("floor") || col.gameObject.CompareTag("enemy"))
         {
             _isOnFloor = true;
         }
@@ -105,7 +121,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D col)
     {
-        if(col.gameObject.CompareTag("floor"))
+        if(col.gameObject.CompareTag("floor") || col.gameObject.CompareTag("enemy"))
         {
             _isOnFloor = false;
         }
@@ -120,5 +136,10 @@ public class Player : MonoBehaviour
                 myRigidBody.velocity = Vector2.up * jumpForce;
             }
         }
+    }
+
+    public void DestroyMe()
+    {
+        Destroy(gameObject);
     }
 }
